@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>红绿灯切换</title>
+        <style>
+              .show  div{
+                  width: 60px;
+                  height: 60px;
+                  background-color: gray;
+                  float: left;
+                  margin-left: 20px;
+                  border-radius: 50%;
+                  
+              }
+              .buttons{
+                  clear: both;
+
+              }
+              .buttons input{
+                  float: left;
+                  margin-left: 30px;
+              }
+              .buttons input:nth-child(3){
+                  margin-left: 45px;
+              }
+
+              /*-------end--------*/
+
+
+
+        </style>
+          <!--js代码，改变颜色-->
+        <script>
+               function changecolor(color){
+                   console.log("我要变色了"+color);
+                     //按钮初始颜色全部为红色
+                   document.getElementById('red-button').style.backgroundcolor="gray";
+                   document.getElementById('yellow-button').style.backgroundcolor="gray";
+                   document.getElementById('green-button').style.backgroundcolor="gray";
+
+                    //信号灯初始颜色为灰色
+                   document.getElementById('red-button').style.backgroundcolor="gray";
+                   document.getElementById('yellow-button').style.backgroundcolor="gray";
+                   document.getElementById('green-button').style.backgroundcolor="gray";
+
+
+
+                   if(color=="red"){
+                       //让按钮和灯都变成红色的背景
+                       document.getElementById('red-button').style.backgroundcolor="red"
+                       document.getElementById('red').style.backgroundColor="red"
+                   }
+
+                   if(color=="yellow"){
+                       //让按钮和灯都变成黄色的背景
+                       document.getElementById('yellow-button').style.backgroundcolor="yellow"
+                       document.getElementById('yellow').style.backgroundColor="yellow"
+                   }
+
+
+                   if(color=="green"){
+                       //让按钮和灯都变成绿色的背景
+                       document.getElementById('green-button').style.backgroundcolor="green"
+                       document.getElementById('green').style.backgroundColor="green"
+                   }
+               }
+
+
+        </script>
+
+    </head>
+    <body>
+         <!--主要显示区域-->
+         <div id="main">
+            <!--上方的灯-->
+              <div class="show">
+                  <div id="red"></div>
+                  <div id="yellow"></div>
+                  <div id="green"></div>
+              </div>
+              <!--下方的按钮-->
+              <div class="buttons">
+                  <input type="button" id="red-button" value="红灯"  onclick="changecolor('red')">
+                  <input type="button" id="yellow-button" value="黄灯"  onclick="changecolor('yellow')">
+                  <input type="button" id="green-button" value="绿灯"  onclick="changecolor('green')">
+              </div>
+        </div>
+        
+    </body>
+</html>
