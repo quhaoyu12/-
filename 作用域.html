@@ -1,0 +1,34 @@
+<html>
+     <head>
+          <script>
+              { var global_value = "块中的全局变量";  //var 定义的是全局
+               let local_value = "块中的局部变量";    // let 定义的是局部
+               const const_value = "块中的常量";      // const 常量
+
+
+               console.log("代码块中的输出："+global_value);
+               console.log("代码块中的输出："+const_value);
+               console.log("代码块中的输出："+global_value);
+              }
+
+              console.log(global_value);  //块中的全局变量
+              console.log(const_value);   //常量 超出局部范围，无法使用
+              console.log(local_value);   // let 作用的范围是局部，超出代码块，无法使用
+
+
+
+          </script>
+
+
+
+     </head>
+
+     <body>
+         
+
+
+
+     </body>
+
+
+</html>
