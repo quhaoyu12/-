@@ -1,0 +1,30 @@
+<html>
+    <head>
+
+
+
+    </head>
+
+    <body>
+         <div>
+             <p id="box"><a href="http://www.baidu.com"> baidu </a></p>
+         </div>        
+
+
+    </body>
+
+    <script>
+           var as = document.getElementsByTagName("a");
+           as[0].onclick = function(event){
+
+          //  event.preventDefault();  // 不再跳转
+
+          
+            console.log("跳转被阻止了");
+            return false; // 直接返回一个false 也能阻止标签的默认事件
+           }
+
+
+    </script>
+
+</html>
